@@ -5,6 +5,10 @@ import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { Counter } from '@/components/Counter/Counter';
 import { HeartIcon, RefreshCcw, Truck } from 'lucide-react';
 
+export async function generateStaticParams() {
+    return [{ id: '1' }];
+}
+
 const imgsProduct = [
     { src: 'https://ir-3.ozone.ru/s3/multimedia-c/wc1000/6380846568.jpg', alt: 'A' },
     { src: 'https://ir-3.ozone.ru/s3/multimedia-b/wc1000/6380846567.jpg', alt: 'B' },
