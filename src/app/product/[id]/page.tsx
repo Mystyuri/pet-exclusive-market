@@ -4,9 +4,10 @@ import { Rating } from '@/components/Rating/Rating';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { Counter } from '@/components/Counter/Counter';
 import { HeartIcon, RefreshCcw, Truck } from 'lucide-react';
+import { getProductList } from '../../../../dal/api';
 
 export async function generateStaticParams() {
-    return [{ id: '1' }];
+    return await getProductList().then((res) => res.map((product) => ({ id: product.slug })));
 }
 
 const imgsProduct = [

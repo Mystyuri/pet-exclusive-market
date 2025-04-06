@@ -15,7 +15,7 @@ export const ProductsList = async () => {
             {products.map((product) => (
                 <div className={'overflow-hidden w-56'} key={product.id}>
                     <Card className={'group relative bg-muted overflow-hidden aspect-square w-56'}>
-                        <Link href={`/product/${product.slug}`}>
+                        <Link href={`./product/${product.slug}`}>
                             <picture>
                                 <img
                                     className={
