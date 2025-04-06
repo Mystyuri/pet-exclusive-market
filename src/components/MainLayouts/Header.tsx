@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Sheet, SheetComponent } from '@/components/MainLayouts/Sheet';
+import { SheetComponent } from '@/components/MainLayouts/Sheet';
 import { SheetClose } from '@/components/ui/sheet';
 
 const linkList = [
