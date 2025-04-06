@@ -15,39 +15,37 @@ const imgsProduct = [
     { src: 'https://ir-3.ozone.ru/s3/multimedia-b/wc1000/6380846567.jpg', alt: 'B' },
     { src: 'https://ir-3.ozone.ru/s3/multimedia-e/wc1000/6380846570.jpg', alt: 'C' },
     { src: 'https://ir-3.ozone.ru/s3/multimedia-d/wc1000/6380846569.jpg', alt: 'D' },
-    { src: 'https://ir-3.ozone.ru/s3/multimedia-c/wc1000/6380846568.jpg', alt: 'E' },
 ];
 
 export default function Product() {
     return (
         <div className="flex flex-col md:flex-row gap-8">
-            <div
-                className="grid gap-2 grow grid-cols-[repeat(auto-fill,_minmax(120px,_auto))] flex-none"
-                style={{
-                    gridTemplateAreas: `"A E E E E"
-                                        "B E E E E"
-                                        "C E E E E"
-                                        "D E E E E"`,
-                }}
-            >
-                {imgsProduct.map((img, i) => (
-                    <Card
-                        key={i}
-                        className={'w-full aspect-square relative'}
-                        style={{ gridArea: img.alt }}
-                    >
-                        <picture>
-                            <img
-                                className={'absolute p-2 inset-0 size-full object-contain'}
-                                src={img.src}
-                                alt={img.alt}
-                            />
-                        </picture>
-                    </Card>
-                ))}
+            <div className="flex sm:h-[480] flex-col sm:flex-row gap-2">
+                <div className={'flex sm:flex-col gap-2 flex-none sm:w-28'}>
+                    {imgsProduct.map((img, i) => (
+                        <Card key={i} className={'aspect-square flex-1 relative'}>
+                            <picture>
+                                <img
+                                    className={'absolute p-2 inset-0 size-full object-contain'}
+                                    src={img.src}
+                                    alt={img.alt}
+                                />
+                            </picture>
+                        </Card>
+                    ))}
+                </div>
+                <Card className={'aspect-square relative order-first sm:order-last'}>
+                    <picture>
+                        <img
+                            className={'absolute p-2 inset-0 size-full object-contain'}
+                            src={imgsProduct[0].src}
+                            alt={imgsProduct[0].alt}
+                        />
+                    </picture>
+                </Card>
             </div>
 
-            <div className="flex flex-col flex-initial gap-4">
+            <div className="flex flex-col flex-1/3 gap-4">
                 <h2 className="text-xl font-bold">Havic HV G-92 Gamepad</h2>
                 <div className={'flex gap-2 text-sm items-center'}>
                     <Rating value={7} />

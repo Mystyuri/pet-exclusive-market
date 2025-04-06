@@ -9,7 +9,7 @@ export const BannerCountdown = () => (
             alt="Background"
         />
         <h2 className="text-chart-2">Categories</h2>
-        <div className="text-4xl text-primary-foreground">
+        <div className="text-3xl text-primary-foreground">
             Enhance Your
             <br />
             Music Experience

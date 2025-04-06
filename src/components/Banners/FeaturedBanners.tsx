@@ -42,7 +42,7 @@ const BannerComponent = ({ title, description, src }: BannerComponent) => (
 
 export const FeaturedBanners = () => (
     <div
-        className="grid gap-4 h-96"
+        className="flex flex-col sm:grid gap-4 sm:h-96"
         style={{
             gridTemplateAreas: `"A A A B B B B"
                                 "A A A C C D D"`,
@@ -51,7 +51,7 @@ export const FeaturedBanners = () => (
         {products.map((product, index) => {
             const area = ['A', 'B', 'C', 'D'][index % 4];
             return (
-                <div key={product.src} style={{ gridArea: area }}>
+                <div key={product.src} style={{ gridArea: area }} className={'h-48 sm:h-auto'}>
                     <BannerComponent
                         title={product.title}
                         description={product.description}

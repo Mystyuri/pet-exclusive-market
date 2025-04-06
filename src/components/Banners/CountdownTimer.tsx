@@ -35,7 +35,7 @@ const CountdownTimer = () => {
         <div className="flex space-x-2">
             {Object.entries(timeLeft).map(([label, value]) => (
                 <div key={label} className="flex flex-col items-center">
-                    <div className="size-16 flex items-center justify-center rounded-full bg-secondary text-primary text-xl font-bold">
+                    <div className="size-14 flex items-center justify-center rounded-full bg-secondary text-primary text-xl font-bold">
                         {value}
                     </div>
                     <span className="text-sm text-gray-500">{label}</span>
